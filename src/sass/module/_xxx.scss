@@ -37,7 +37,7 @@
     }
 }
 
-// drawer
+// drawer button
 .header>.js-drawer {
     display: block;
     width: rem(50);
@@ -48,7 +48,7 @@
     background: rgba(255, 0, 0, 1);
 
     @include mq(md) {
-        // 
+        display: none;
     }
 }
 
@@ -153,4 +153,34 @@
 // js-drawer-open時の動作
 .js-drawer-menu-open {
     top: 0;
+}
+
+//  global menu
+.global-menu {
+    display: none;
+
+    @include mq(md) {
+        display: flex;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: rem(20);
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.global-menu>a,
+.global-menu>a>li {
+    @include mq(md) {
+        display: inherit;
+        height: inherit;
+        align-items: center;
+    }
+}
+
+.global-menu>a {
+    @include mq(md) {
+        display: inherit;
+        padding: 0 rem(20);
+    }
 }

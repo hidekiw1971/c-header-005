@@ -205,6 +205,12 @@ select::-ms-expand {
   right: 1.25rem;
   background: rgb(255, 0, 0);
 }
+@media screen and (min-width: 768px) {
+  .header > .js-drawer {
+    display: none;
+  }
+}
+
 .header > .js-drawer > span {
   display: block;
   width: 100%;
@@ -287,5 +293,39 @@ select::-ms-expand {
 }
 .js-drawer-menu-open {
   top: 0;
+}
+
+.global-menu {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .global-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 1.25rem;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .global-menu > a,
+  .global-menu > a > li {
+    display: inherit;
+    height: inherit;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .global-menu > a {
+    display: inherit;
+    padding: 0 1.25rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
