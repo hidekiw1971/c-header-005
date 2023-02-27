@@ -184,3 +184,31 @@
         padding: 0 rem(20);
     }
 }
+
+// お問い合わせ（global-menu-inquiry）
+.global-menu-inquiry {
+    position: relative;
+    overflow: hidden;
+}
+
+.global-menu-inquiry>li {
+    position: relative;
+    z-index: 1;
+
+}
+
+.global-menu-inquiry::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 105, 180, 1);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+}
+
+.global-menu-inquiry:hover::before {
+    left: 0;
+}
