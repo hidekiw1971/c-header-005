@@ -120,12 +120,13 @@
     display: block;
     background: rgba(255, 105, 180, 1);
     width: 100%;
-    height: 100vh; // menuが増えた時はこのheightは削除。
+    height: 100dvh;
     position: absolute;
     top: -100%;
     left: 0;
-    padding: rem(70) 0;
+    padding: rem(70);
     transition: 0.3s;
+
 
     @include mq(md) {
         // 
@@ -153,6 +154,7 @@
 // js-drawer-open時の動作
 .js-drawer-menu-open {
     top: 0;
+
 }
 
 //  global menu
