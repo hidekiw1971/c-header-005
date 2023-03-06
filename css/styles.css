@@ -271,17 +271,21 @@ select::-ms-expand {
   display: block;
   background: rgb(255, 105, 180);
   width: 100%;
-  height: 100dvh;
+  min-height: 0dvh;
   position: absolute;
-  top: -100%;
+  top: 0;
   left: 0;
-  padding: 70px;
-  padding: 4.375rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (min-width: 768px) {
+  .js-drawer-menu {
+    display: none;
+  }
+}
+
 .js-drawer-menu > a {
-  display: block;
+  display: none;
   padding: 10px 0;
   padding: 0.625rem 0;
   margin-bottom: 5px;
@@ -291,7 +295,15 @@ select::-ms-expand {
   text-align: center;
 }
 .js-drawer-menu-open {
-  top: 0;
+  min-height: 100dvh;
+  padding: 70px 0;
+  padding: 4.375rem 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.js-drawer-menu > .js-a-open {
+  display: block;
 }
 
 .global-menu {

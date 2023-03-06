@@ -34,6 +34,7 @@
 
 - 2023/2/26 初版 対応中
 - 2023/3/1  mobile(safari,chrome)での100vh不具合対応。→ 100dvhに変更
+- 2023/3/7  menu部分の開閉の動作をpositionでの操作をやめ、min-height(0dvh or 100dvh)に変更。他もろもろ。
 
 ## 環境起動手順
 - term起動
